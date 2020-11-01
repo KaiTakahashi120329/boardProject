@@ -13,6 +13,10 @@
 
     <h1 class="h3 mb-3 font-weight-normal">サインインする</h1>
 
+    {% if error %}
+        {{ error }}
+    {% endif %}
+
     <label for="inputEmail" class="sr-only">メールアドレス</label>
 
     <input type="text" id="inputEmail" class="form-control" name='username' placeholder="ユーザーネーム" required autofocus>

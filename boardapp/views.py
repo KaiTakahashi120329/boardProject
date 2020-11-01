@@ -26,3 +26,6 @@ def loginFunc(request):
         else:
             return redirect('login')
     return render(request, 'login.html')
+
+def listFunc(request):
+    return render(request, 'list.html')

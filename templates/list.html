@@ -4,8 +4,13 @@
 {% endblock customCSS %}
 
 {% block header %}
-<div class="alert alert-primary" role="alert">
-  社内チャットツール
+<div class="wrap d-flex justify-content-around alert alert-primary">
+  <div class="alert-primary" role="alert">
+    社内チャットツール
+  </div>
+  <div>
+    <a href="{% url 'logout' %}">ログアウト</a>
+  </div>
 </div>
 {% endblock header %}
 
@@ -19,5 +24,4 @@
         <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Link</a>
     </div>
     {% endfor %}
-</div>
 {% endblock content %}

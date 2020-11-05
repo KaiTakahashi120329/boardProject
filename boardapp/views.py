@@ -41,3 +41,9 @@ def logoutFunc(request):
 def detailFunc(request, pk):
     object = BoardModel.objects.get(pk=pk)
     return render(request, 'detail.html', {'object':object})
+
+def goodFunc(request, pk):
+    good = BoardModel.objects.get(pk=pk)
+    good.good = good.good + 1
+    good.save()
+    return redirect('list')

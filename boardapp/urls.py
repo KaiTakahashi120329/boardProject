@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import signupFunc, loginFunc, listFunc, logoutFunc, detailFunc, goodFunc, readFunc
+from .views import signupFunc, loginFunc, listFunc, logoutFunc, detailFunc, goodFunc, readFunc, BoardCreateView
 
 urlpatterns = [
     path('signup/', signupFunc, name='signup'),
@@ -8,5 +8,6 @@ urlpatterns = [
     path('list/', listFunc, name='list'),
     path('detail/<int:pk>', detailFunc, name='detail'),
     path('good/<int:pk>', goodFunc, name='good'),
-    path('read/<int:pk>', readFunc, name='read')
+    path('read/<int:pk>', readFunc, name='read'),
+    path('create/', BoardCreateView.as_view(), name='create')
 ]
